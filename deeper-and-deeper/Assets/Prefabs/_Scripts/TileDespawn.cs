@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TileDespawn : MonoBehaviour {
@@ -14,7 +12,7 @@ public class TileDespawn : MonoBehaviour {
             Mathf.Pow((target.position.x - transform.position.x), 2)
             + Mathf.Pow((target.position.y - transform.position.y), 2)
         );
-        if(sqDist > 100) {
+        if(sqDist > 225) {
             Destroy(gameObject);
         }
     }

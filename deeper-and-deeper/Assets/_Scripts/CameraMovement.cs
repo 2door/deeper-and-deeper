@@ -1,6 +1,4 @@
 // Camera scrolling: https://www.youtube.com/watch?v=H6q-Y5JAiDk&list=LL&index=3&t=638s&ab_channel=KeeGamedev
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {

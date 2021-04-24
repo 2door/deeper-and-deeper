@@ -50,7 +50,7 @@ MonoBehaviour:
   verticalSpeed: 0
   maxVelocityChange: 10
   maxSpeedX: 100
-  rb: {fileID: 0}
+  rb: {fileID: 7821105819033375267}
 --- !u!50 &7821105819033375267
 Rigidbody2D:
   serializedVersion: 4
