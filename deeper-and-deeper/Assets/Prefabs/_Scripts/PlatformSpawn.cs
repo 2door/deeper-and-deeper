@@ -28,7 +28,7 @@ public class PlatformSpawn : MonoBehaviour {
 
     private void SpawnPlatform(float Y) {
         // Pick random pattern
-        int pattern = Random.Range(0, patterns.Length - 1);
+        int pattern = Random.Range(0, patterns.Length);
         for(int i = 0; i < spawners.Count; i++) {
             if(patterns[pattern][i] == 1) {
                 Vector3 instantiatePosition = new Vector3(spawners[i].position.x, Y, .0f);

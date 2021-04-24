@@ -134,17 +134,21 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 4618680}
+    - target: {fileID: 756442077891161945, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
+      propertyPath: verticalSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1737712217174362004, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 7821105819033375267, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_Mass
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7821105819033375267, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_GravityScale
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8575236465497688646, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_RootOrder
