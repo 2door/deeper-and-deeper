@@ -2,21 +2,37 @@
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-    public Transform target;
     public float cameraOffset;
+    public Transform target;
+    public GameEvent gameOverEvent;
 
     private float zLayer;
     private float xPos;
+    private bool gameOver;
+    private bool paused;
+    private GameEventListener gameOverEventListener;
+
     void Start() {
+        gameOver = false;
+        paused = false;
         zLayer = transform.position.z;
         xPos = transform.position.x;
+
+        gameOverEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
+        gameOverEventListener.SetupListener(gameOverEvent, GameOver);
     }
 
     void FixedUpdate() {
-        float expectedY = target.position.y - cameraOffset;
-        if(expectedY < transform.position.y) {
-            Vector3 targetPos = new Vector3(xPos, expectedY, zLayer);
-            transform.position = Vector3.Lerp(transform.position, targetPos, 0.2f);
+        if(!gameOver && !paused) {
+            float expectedY = target.position.y - cameraOffset;
+            if(expectedY < transform.position.y) {
+                Vector3 targetPos = new Vector3(xPos, expectedY, zLayer);
+                transform.position = Vector3.Lerp(transform.position, targetPos, 0.2f);
+            }
         }
+    }
+
+    private void GameOver() {
+        gameOver = true;
     }
 }
