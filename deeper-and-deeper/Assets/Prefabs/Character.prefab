@@ -47,10 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 10
-  verticalSpeed: 0
-  maxVelocityChange: 10
-  maxSpeedX: 100
+  verticalSpeed: 10
   rb: {fileID: 7821105819033375267}
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &7821105819033375267
 Rigidbody2D:
   serializedVersion: 4
@@ -63,10 +64,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: eded2cb70621e4cf2b2eff3fb98eb580, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

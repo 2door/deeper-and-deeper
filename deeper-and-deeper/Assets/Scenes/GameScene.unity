@@ -131,24 +131,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 756442077891161945, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 4618680}
-    - target: {fileID: 756442077891161945, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: verticalSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1737712217174362004, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821105819033375267, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-      propertyPath: m_Mass
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7821105819033375267, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-      propertyPath: m_GravityScale
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8575236465497688646, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: m_RootOrder
@@ -196,11 +184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
---- !u!50 &4618680 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7821105819033375267, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-  m_PrefabInstance: {fileID: 4618678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7247968
 PrefabInstance:
   m_ObjectHideFlags: 0
