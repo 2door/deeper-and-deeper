@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class TileSpawner : MonoBehaviour {
-    public GameObject tilePrefab;
+    public Transform tilePrefab;
     public float distance;
 
     private Vector3 nextTilePosition;
@@ -24,7 +24,7 @@ public class TileSpawner : MonoBehaviour {
             spawnPosition.y,
             .0f
         );
-        Instantiate(tilePrefab.transform, instantiatePosition,  Quaternion.identity);
+        Instantiate(tilePrefab, instantiatePosition,  Quaternion.identity);
         nextTilePosition = new Vector3(instantiatePosition.x, instantiatePosition.y - distance, .0f);
     }
 }

@@ -13,8 +13,9 @@ public class CameraMovement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if(target.position.y < transform.position.y) {
-            Vector3 targetPos = new Vector3(xPos, target.position.y - cameraOffset, zLayer);
+        float expectedY = target.position.y - cameraOffset;
+        if(expectedY < transform.position.y) {
+            Vector3 targetPos = new Vector3(xPos, expectedY, zLayer);
             transform.position = Vector3.Lerp(transform.position, targetPos, 0.2f);
         }
     }

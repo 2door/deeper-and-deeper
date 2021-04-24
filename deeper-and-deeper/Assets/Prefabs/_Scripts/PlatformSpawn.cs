@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlatformSpawn : MonoBehaviour {
     public List<Transform> spawners;
-    public GameObject tilePrefab;
+    public Transform tilePrefab;
+    public Transform obstaclePrefab;
     public float distance;
 
     private float nextY;
     private int[][] patterns = new int[][] {
         new int[] {1, 1, 0, 0, 0, 0, 0, 1, 1},
         new int[] {0, 0, 0, 1, 1, 1, 0, 0, 0},
-        new int[] {1, 0, 0, 0, 1, 0, 0, 0, 1}
+        new int[] {1, 0, 0, 0, 1, 0, 0, 0, 1},
+        new int[] {0, 0, 1, 1, 2, 1, 1, 0, 0},
+        new int[] {2, 0, 0, 1, 1, 1, 0, 0, 2}
     };
 
     void Start() {
@@ -28,11 +31,14 @@ public class PlatformSpawn : MonoBehaviour {
 
     private void SpawnPlatform(float Y) {
         // Pick random pattern
-        int pattern = Random.Range(0, patterns.Length);
+        int[] pattern = patterns[Random.Range(0, patterns.Length)];
         for(int i = 0; i < spawners.Count; i++) {
-            if(patterns[pattern][i] == 1) {
+            if(pattern[i] == 1) {
                 Vector3 instantiatePosition = new Vector3(spawners[i].position.x, Y, .0f);
-                Instantiate(tilePrefab.transform, instantiatePosition, Quaternion.identity);
+                Instantiate(tilePrefab, instantiatePosition, Quaternion.identity);
+            } else if(pattern[i] == 2) {
+                Vector3 instantiatePosition = new Vector3(spawners[i].position.x, Y, .0f);
+                Instantiate(obstaclePrefab, instantiatePosition, Quaternion.identity);
             }
         }
         nextY = Y - distance;

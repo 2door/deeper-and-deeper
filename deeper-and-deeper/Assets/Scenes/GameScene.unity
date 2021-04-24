@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1676351012}
-  cameraOffset: 0
+  cameraOffset: 1.25
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2594,6 +2594,14 @@ PrefabInstance:
       propertyPath: distance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7317148749090919522, guid: 2859e4f27efca405797873b1b23e1cb7, type: 3}
+      propertyPath: tilePrefab
+      value: 
+      objectReference: {fileID: 7273711299373735136, guid: 463f0110784414a86a327b49fdb3eea1, type: 3}
+    - target: {fileID: 7317148749090919522, guid: 2859e4f27efca405797873b1b23e1cb7, type: 3}
+      propertyPath: obstaclePrefab
+      value: 
+      objectReference: {fileID: 6474533244770327959, guid: 79b1c32298bc948759042b9ac5eb848b, type: 3}
     - target: {fileID: 7317148749090919532, guid: 2859e4f27efca405797873b1b23e1cb7, type: 3}
       propertyPath: m_Name
       value: PlatformSpawner
