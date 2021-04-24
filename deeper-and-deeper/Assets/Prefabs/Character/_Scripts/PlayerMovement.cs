@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
     public float horizontalSpeed;
@@ -8,11 +7,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField] private LayerMask platformLayerMask;
 	private BoxCollider2D boxCollider;
-	private int counter;
 
 	void Start() {
 		boxCollider = transform.GetComponent<BoxCollider2D>();
-		counter = 0;
 	}
 
 	// Using update in order to overcome input loss

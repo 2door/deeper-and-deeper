@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: -523587332487363865}
   - component: {fileID: -4344851549588741420}
   - component: {fileID: -4613415523485459041}
-  m_Layer: 0
+  - component: {fileID: 2203324972238240934}
+  m_Layer: 6
   m_Name: ObstacleTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,6 +94,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2203324972238240934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178290337013926570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb56d305e9d1b43a9b32e7e7cfe202e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealtEvent: {fileID: 11400000, guid: 185eb362b449d4c3989b054bb8f233d8, type: 2}
 --- !u!1 &5867076471156852157
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3858768626362488076}
   - component: {fileID: 5568845875914035560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
