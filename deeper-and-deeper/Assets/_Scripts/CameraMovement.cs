@@ -14,7 +14,6 @@ public class CameraMovement : MonoBehaviour {
         xPos = transform.position.x;
     }
 
-    // Update is called once per frame
     void FixedUpdate() {
         if(target.position.y < transform.position.y) {
             Vector3 targetPos = new Vector3(xPos, target.position.y - cameraOffset, zLayer);
