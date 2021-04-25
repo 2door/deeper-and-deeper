@@ -17,11 +17,12 @@ public class PlayerHPController : MonoBehaviour {
     private GameEventListener damageDealtListener;
     private int hp;
     private bool isInvulnerable;
+    private AudioSource hitAudio;
 
     void Start() {
         hp = maxHealth;
         isInvulnerable = false;
-
+        hitAudio = transform.GetComponent<AudioSource>();
         damageDealtListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         damageDealtListener.SetupListener(damageDealtEvent, TakeDamage);
     }
@@ -29,6 +30,7 @@ public class PlayerHPController : MonoBehaviour {
     private void TakeDamage() {
         if(!isInvulnerable) {
             hp -= 1;
+            hitAudio.Play();
             UpdateHPHUD();
             if (hp <= 0) {
                 gameOverEvent.Raise();

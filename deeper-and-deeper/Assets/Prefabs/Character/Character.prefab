@@ -124,7 +124,7 @@ MonoBehaviour:
   fullContainer: {fileID: 5682393469540925955, guid: 7c335452d7c3c457599e1e8103f7c850, type: 3}
   emptyContainer: {fileID: 2403724249865808194, guid: 7c335452d7c3c457599e1e8103f7c850, type: 3}
   playerAnimator: {fileID: 0}
-  invulnerableDuration: 0.1
+  invulnerableDuration: 1
 --- !u!1001 &7942535021158690026
 PrefabInstance:
   m_ObjectHideFlags: 0

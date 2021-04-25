@@ -13,12 +13,14 @@ public class PlayerMovement : MonoBehaviour {
 	private bool gameOver;
 	private bool paused;
 	private bool isJumping;  // To avoid updating the animator parameter every frame
+	private bool isRunning;
 	private GameEventListener gameOverEventListener;
-
 	private String isJumpingAnimatorFlag = "IsJumping";
+	private AudioSource jumpAudio;
 
 	void Start() {
 		boxCollider = transform.GetComponent<BoxCollider2D>();
+		jumpAudio = transform.GetComponent<AudioSource>();
 		gameOverEventListener = (GameEventListener) ScriptableObject.CreateInstance("GameEventListener");
         gameOverEventListener.SetupListener(gameOverEvent, GameOver);
 	}
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
 		if(!gameOver && !paused) {
 			Vector2 verticalVelocity = VerticalVelocity();
-			Vector2 horizontalVelocity = new Vector2(Input.GetAxis("Horizontal") * horizontalSpeed, 0f);
+			Vector2 horizontalVelocity = HorizontalVelocity();
 			rb.velocity = horizontalVelocity + verticalVelocity;
 		}
     }
@@ -38,17 +40,43 @@ public class PlayerMovement : MonoBehaviour {
 		bool isGrounded = IsGrounded();
 		if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
 			playerAnimator.SetBool(isJumpingAnimatorFlag, true);
+			jumpAudio.Play();
 			velocity = verticalSpeed;
 		}
 
-		if(!isGrounded) {
+		// Animate jumping
+		if(!isGrounded && !isJumping) {
 			isJumping = true;
 		} else if(isJumping) {
 			playerAnimator.SetBool(isJumpingAnimatorFlag, false);
 			isJumping = false;
 		}
-		
+
 		return new Vector2(0f, velocity);
+	}
+
+	private Vector2 HorizontalVelocity() {
+		float velocity = Input.GetAxis("Horizontal") * horizontalSpeed;
+		// Animate running
+		if(velocity != 0f) {
+			isRunning = true;
+			playerAnimator.SetBool("IsRunning", true);
+		} else if(isRunning) {
+			isRunning = false;
+			playerAnimator.SetBool("IsRunning", false);
+		}
+
+		// Flip character
+		Vector2 localScale = transform.localScale;
+		if(velocity > 0) {
+			localScale.x = 1f;
+			transform.localScale = localScale;
+		} else if(velocity < 0) {
+			localScale.x = -1f;
+			transform.localScale = localScale;
+		}
+
+		return new Vector2(Input.GetAxis("Horizontal") * horizontalSpeed, 0f);
 	}
 
 	private bool IsGrounded() {
@@ -57,6 +85,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void GameOver() {
+		playerAnimator.SetBool("IsGameOver", true);
 		gameOver = true;
 	}
 }
