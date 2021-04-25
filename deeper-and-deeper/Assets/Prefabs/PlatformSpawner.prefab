@@ -332,5 +332,6 @@ MonoBehaviour:
   - {fileID: 7317148747759592600}
   - {fileID: 7317148747287399783}
   - {fileID: 7317148747214996230}
-  tilePrefab: {fileID: 9080229495390143497, guid: 463f0110784414a86a327b49fdb3eea1, type: 3}
+  tilePrefab: {fileID: 7273711299373735136, guid: 463f0110784414a86a327b49fdb3eea1, type: 3}
+  obstaclePrefab: {fileID: 6474533244770327959, guid: 79b1c32298bc948759042b9ac5eb848b, type: 3}
   distance: 7
