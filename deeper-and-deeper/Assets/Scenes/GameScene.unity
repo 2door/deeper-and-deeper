@@ -130,14 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1376601054306856092, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-      propertyPath: fullContainer
+    - target: {fileID: 756442077891161945, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
+      propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 5682393469540925955, guid: 7c335452d7c3c457599e1e8103f7c850, type: 3}
+      objectReference: {fileID: 1676351011}
     - target: {fileID: 1376601054306856092, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
-      propertyPath: emptyContainer
+      propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 2403724249865808194, guid: 7c335452d7c3c457599e1e8103f7c850, type: 3}
+      objectReference: {fileID: 1676351011}
+    - target: {fileID: 1376601054306856092, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
+      propertyPath: invulnerableDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376601054306856092, guid: 0a81fad51cb1845dcaf763d64d5e91aa, type: 3}
       propertyPath: containers.Array.data[0]
       value: 
