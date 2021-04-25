@@ -279,6 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317148749090919533}
+  - component: {fileID: 5464698440332388142}
   m_Layer: 0
   m_Name: PointSpawner
   m_TagString: Untagged
@@ -309,3 +310,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5464698440332388142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7317148749090919532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dde96941a2541119463207a9ab41df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 7317148749034488833}
+  - {fileID: 7317148748907760963}
+  - {fileID: 7317148749085329392}
+  - {fileID: 7317148747797612125}
+  - {fileID: 7317148747327126343}
+  - {fileID: 7317148747288559939}
+  - {fileID: 7317148747759592600}
+  - {fileID: 7317148747287399783}
+  - {fileID: 7317148747214996230}
+  pointPrefab: {fileID: 4974085646267889191, guid: 7b735e41eba914d3fb0d7dcb6b5f2577, type: 3}
+  distance: 20
